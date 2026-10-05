@@ -1,0 +1,15 @@
+[Unit]
+Description=Katalog_B
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/bot_admin/katalog/tgKatalogBot
+ExecStart=/home/bot_admin/katalog/tgKatalogBot/venv/bin/python3 /home/bot_admin/katalog/tgKatalogBot/main.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
